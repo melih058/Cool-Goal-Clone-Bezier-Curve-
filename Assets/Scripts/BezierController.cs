@@ -33,14 +33,14 @@ public class BezierController : MonoBehaviour
 
             if (!_p1.isStopped && _p2.isCenter)
             {
-                _p1.tryUpdateLerpValue(diffX);
+                _p1.tryUpdateLerpValue(-diffX);
             }
             else
             {
-                _p2.tryUpdateLerpValue(-diffX);
+                _p2.tryUpdateLerpValue(diffX);
                 if (_p2.isCenter)
                 {
-                    _p1.tryUpdateLerpValue(diffX);
+                    _p1.tryUpdateLerpValue(-diffX);
                 }
             }
 
